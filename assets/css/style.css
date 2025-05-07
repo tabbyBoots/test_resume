@@ -1,0 +1,24 @@
+/* 大頭照比例設定 */
+.profile-image .picture {
+    display: flex;
+    justify-content: center;
+    height: 220px !important;
+}
+
+/* 大頭照在電腦模式下照片不設定左邊界及上邊界 */
+@media (min-width: 768px) {
+    .profile-image .picture {
+        padding-left: 0px !important;
+        padding-top: 0px !important;
+        margin-top: 0px !important;
+    }
+}
+
+/* 大頭照在手機模式下照片不設定寛度 */
+@media (max-width: 767.98px) {
+    .profile-image .picture {
+        margin: auto !important;
+        width: auto !important;
+        height: auto !important;
+    }
+}
