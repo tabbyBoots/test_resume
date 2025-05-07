@@ -1,24 +1,49 @@
-/* 大頭照比例設定 */
-.profile-image .picture {
+/* Portfolio Section */
+.portfolio-section {
+    margin: 20px;
+}
+
+.portfolio-card {
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    height: 100%;
     display: flex;
-    justify-content: center;
-    height: 220px !important;
+    flex-direction: column;
+    min-height: 380px; /* Ensures minimum height matches longest content */
 }
 
-/* 大頭照在電腦模式下照片不設定左邊界及上邊界 */
-@media (min-width: 768px) {
-    .profile-image .picture {
-        padding-left: 0px !important;
-        padding-top: 0px !important;
-        margin-top: 0px !important;
-    }
+.portfolio-card .card-body {
+    flex: 1;
 }
 
-/* 大頭照在手機模式下照片不設定寛度 */
-@media (max-width: 767.98px) {
-    .profile-image .picture {
-        margin: auto !important;
-        width: auto !important;
-        height: auto !important;
-    }
+.portfolio-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.portfolio-card .card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
+.portfolio-card .card-body {
+    padding: 1.5rem;
+}
+
+.portfolio-card .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.portfolio-card .card-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.portfolio-card .technologies {
+    margin-top: 1rem;
 }
